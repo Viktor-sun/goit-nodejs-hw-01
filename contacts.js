@@ -52,7 +52,7 @@ async function addContact(name, email, phone) {
       email,
       phone,
     })
-    const addedContatctForFs = JSON.stringify(parsedAllContacts)
+    const addedContatctForFs = JSON.stringify(parsedAllContacts, null, 2)
     await fs.writeFile(contactsPath, addedContatctForFs)
     console.log(
       'Contact added! To view all contacts, enter the command: node index.js --action list'
